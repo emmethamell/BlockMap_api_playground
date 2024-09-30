@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Playground</title>
+</head>
+<body>
+    <h1>API Playground</h1>
+    <h2>Try:</h2>
+    <div>
+        <p>
+            GET buildings
+        </p>
+        <p>
+            GET room?roomId=MAH-108
+        </p>
+        <p>
+            POST rooms, Requst body: ["MAH-108", "SOM-120"]
+        </p>
+    </div>
+    <div>
+        <label for="endpoint">Endpoint:</label>
+        <input type="text" id="endpoint" placeholder="buildings">
+    </div>
+    <div>
+        <label for="method">Method:</label>
+        <select id="method">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+        </select>
+    </div>
+    <div id="body-input" style="display:none;">
+        <label for="params">Request Body:</label>
+        <textarea id="params" placeholder='{"roomIds": ["building-room1", "building-room2"]}'></textarea>
+    </div>
+    <button id="send">Send Request</button>
+    <pre id="response"></pre>
+    <script src="script.js"></script> 
+</body>
+</html>

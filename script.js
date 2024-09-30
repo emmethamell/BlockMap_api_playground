@@ -8,7 +8,6 @@ document.getElementById('send').addEventListener('click', async () => {
     const endpoint = document.getElementById('endpoint').value;
     const method = document.getElementById('method').value;
     const params = method === 'POST' ? document.getElementById('params').value : null;
-    print(endpoint)
     const url = `https://blockmap.onrender.com/${endpoint}`;
 
     try {
